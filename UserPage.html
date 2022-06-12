@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <!-- CSS only -->
+    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<style>
+    .inputField{
+    width: 4rem;
+    height: 3rem;
+}
+.mainDiv{
+    width: 25rem;
+    margin: 5rem 20rem 5rem 23rem;
+}
+.btn{
+    margin: 5.4rem;
+}
+</style>
+</head>
+<body>
+ <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Xelpcom Technology</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">     
+      
+    <ul class="navbar-nav me-right">
+     <li class="nav-item">
+          <a class="nav-link" href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">User</a>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link text-light" href="LogoutServlet">Logout</a>
+        </li>
+    </ul>
+    </div>
+  </div>
+</nav>
+
+        <div class="container">
+            <div class="mainDiv">
+            <div class="row">
+              <div class="col">
+               <input type="text" id="numberOne" class="inputField" required>
+              </div>
+              <div class="col">
+                <input type="text" id="numberTwo"  class="inputField" required>
+              </div>
+              <div class="col">
+                <input type="text" id="numberThree" class="inputField" required>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4 id="val1"></h4>
+                    <h4 id="val2"></h4>
+                    <h4 id="val3"></h4>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col "><button class="btn btn-primary my-5" onclick="checkPrimeNumber()">Check Prime Number</button></div>
+            </div>
+           
+            </div>
+          </div>
+          
+          
+</body>
+<!-- JavaScript Bundle with Popper -->
+  <!-- Javascripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+  <script type="text/javascript" src="js/Myjs.js"></script>
+
+<script> 
+    const checkPrimeNumber = () => {
+        var num1 = parseInt(document.getElementById("numberOne").value);
+        var num2 = parseInt(document.getElementById("numberTwo").value);
+        var num3 = parseInt(document.getElementById("numberThree").value);
+        var isPrimeNumber = true;      
+      
+            for(let i = 2; i < num1; i++){
+            if(num1 % i == 0){
+               isPrimeNumber = false;
+            }
+        }
+        if (isPrimeNumber == true) {
+            let n1 = `${num1} is a Prime Number`;
+            document.getElementById("val1").innerHTML = n1;
+
+        }else{
+            let n1 = `${num1} is not a Prime Number`;
+            document.getElementById("val1").innerHTML = n1;
+
+        }
+
+        for(let i = 2; i < num2; i++){
+            if(num2 % i == 0){
+               isPrimeNumber = false;
+            }
+        }
+        if (isPrimeNumber == true) {
+            let n2 = `${num2} is a Prime Number`;
+            document.getElementById("val2").innerHTML = n2;
+
+        }else{
+            let n2 = `${num2} is not a Prime Number`;
+            document.getElementById("val2").innerHTML = n2;
+
+        }
+
+        for(let i = 2; i < num3; i++){
+            if(num3 % i == 0){
+               isPrimeNumber = false;
+            }
+        }
+        if (isPrimeNumber == true) {
+            let n3 = `${num3} is a Prime Number`;
+            document.getElementById("val3").innerHTML = n3;
+        }else{
+            let n3 = `${num3} is not a Prime Number`;
+            document.getElementById("val3").innerHTML = n3;
+        }
+        }
+    
+</script>
+</html>

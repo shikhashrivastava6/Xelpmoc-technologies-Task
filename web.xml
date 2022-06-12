@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Xelpcom</display-name>
+  <welcome-file-list>
+    <welcome-file>Home.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>register</servlet-name>
+  <servlet-class>com.tech.xelpcom.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>register</servlet-name>
+  <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>helper</servlet-name>
+  <servlet-class>com.tech.xelpcom.helper.ConnectionProvider</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>helper</servlet-name>
+   <url-pattern>/ConnectionProvider</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>entity</servlet-name>
+  <servlet-class>com.tech.xelpcom.entities.User</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>entity</servlet-name>
+  <url-pattern>/User</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+       <servlet-name>database</servlet-name>
+       <servlet-class>com.tech.xelpcom.dao.UserDao</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>database</servlet-name>
+    <url-pattern>/UserDao</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.tech.xelpcom.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>Out</servlet-name>
+    <servlet-class>com.tech.xelpcom.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>Out</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+  
+</web-app>
